@@ -1,0 +1,52 @@
+/* src/Sidebar.css */
+.menu-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px; /* Increase padding for bigger size */
+  cursor: pointer;
+  font-size: 24px; /* Increase font size for larger icon */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.menu-button:hover {
+  background: #444;
+}
+
+.sidebar-content {
+  padding: 20px;
+  color: black; /* Adjust text color for better readability */
+}
+
+.menu-item {
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Slight highlight on hover */
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    top: 15px;
+    left: 15px;
+    padding: 8px 12px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-button {
+    top: 10px;
+    left: 10px;
+    padding: 6px 10px;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,30 @@
+.shuttle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.shuttle-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.shuttle-up {
+  background: linear-gradient(to right, #6ee7b7, #6ee7b7);
+}
+
+.shuttle-down {
+  background: linear-gradient(to right, #fb7185, #fb7185);
+}
+
+.shuttle-card h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.shuttle-card p {
+  margin: 5px 0;
+}
