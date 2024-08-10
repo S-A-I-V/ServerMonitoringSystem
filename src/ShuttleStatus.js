@@ -28,29 +28,19 @@ const ShuttleStatus = () => {
   return (
     <div>
       <h1>Shuttle Status</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>IP Address</th>
-            <th>Status</th>
-            <th>Timestamp</th>
-          </tr>
-        </thead>
-        <tbody>
-          {shuttles.map(shuttle => (
-            <tr
-              key={shuttle.shuttle_ip}
-              className={`shuttle-row ${shuttle.shuttle_state === 'up' ? 'shuttle-up' : 'shuttle-down'}`}
-            >
-              <td>{shuttle.shuttle_name}</td>
-              <td>{shuttle.shuttle_ip}</td>
-              <td>{shuttle.shuttle_state}</td>
-              <td>{shuttle.state_timestamp}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="shuttle-grid">
+        {shuttles.map(shuttle => (
+          <div
+            key={shuttle.shuttle_ip}
+            className={`shuttle-card ${shuttle.shuttle_state === 'up' ? 'shuttle-up' : 'shuttle-down'}`}
+          >
+            <h3>{shuttle.shuttle_name}</h3>
+            <p>{shuttle.shuttle_ip}</p>
+            <p>{shuttle.shuttle_state}</p>
+            <p>{shuttle.state_timestamp}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
